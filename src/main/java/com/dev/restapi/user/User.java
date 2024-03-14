@@ -2,9 +2,14 @@ package com.dev.restapi.user;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
+
 public class User {
     private int id;
+    @Size(min=2)
     private String name;
+    @Past
     private LocalDate dateOfBirth;
     
     public User(int id, String name, LocalDate dateOfBirth) {
