@@ -1,6 +1,10 @@
 package com.dev.restapi.versioning;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+
+@JsonFilter("ListFilter")
 public class Name {
+   
     private String firstName;
     private String lastName;
     
